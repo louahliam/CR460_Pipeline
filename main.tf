@@ -47,7 +47,8 @@ resource "azurerm_public_ip" "pip" {
   name                = "pip-vm-demo"
   location            = azurerm_resource_group.myResourceGroup.location
   resource_group_name = azurerm_resource_group.myResourceGroup.name
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
+  sku                 = "Standard"
 }
 
 # 4. Interface reseau (NIC) reliant le Subnet et l'IP Publique
